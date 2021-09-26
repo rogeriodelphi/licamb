@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block titulo %}
+Cadastro de Vacinas
+{% endblock titulo %}
+
+{% block bread %}
+<!--<a href="{% url 'vacinas:adicionar_vacina' %}"> Cadastro de Vacinas</a>-->
+{% endblock bread %}
+
+{% block content %}
+<body id="page-top">
+<div id="wrapper">
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <div class="container-fluid">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Cadastro de Divisão</h2>
+                    </div>
+                    <div class="white-box">
+                        <h3 class="box-title m"></h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="form" method="POST">
+                            {% csrf_token %}
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {{ form.codigo.errors }}
+                                        <label for="{{ form.codigo.id_for_label }}"><strong>Código:</strong></label>
+                                        {{ form.codigo | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.descricao.errors }}
+                                        <label for="{{ form.descricao.id_for_label }}"><strong>Descrição:</strong></label>
+                                        {{ form.descricao | add_class:"form-control" }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer py-3">
+                                <button type="submit" class="btn btn-info"><i class="fa fa-plus"></i> Salvar</button>             &nbsp;
+                                <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                                    <i class="fa fa-angle-double-left"></i> Voltar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

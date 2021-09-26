@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}
+Erro 400
+{% endblock titulo %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="text-center">
+            <div class="error mx-auto" data-text="404">404</div>
+            <p class="lead text-gray-800 mb-5">Página não encontrada</p>
+            <p class="text-gray-500 mb-0">Desculpa, a página que você está procurando não existe nesse site.</p>
+            <a href="{% url 'site' %}">&larr; Voltar à página Principal</a>
+            <br><br>
+            <h6>Caminho acessado: {{ request_path }}</h6>
+            <h6>Erro: {{ exception }}</h6>
+
+        </div>
+    </div>
+{% endblock content %}
