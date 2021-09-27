@@ -80,90 +80,15 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsepacientes"
-                       aria-expanded="true" aria-controls="collapsepacientes">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetipologias"
+                       aria-expanded="true" aria-controls="collapsetipologias">
                         <i class="fas fa-file-import"></i>
                         <span>Tipologias</span>
                     </a>
-                    <div id="collapsepacientes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div id="collapsetipologias" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="#">Cadastro</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseprofissionais"
-                       aria-expanded="true" aria-controls="collapseprofissionais">
-                        <i class="fas fa-file-import"></i>
-                        <span>Profissionais</span>
-                    </a>
-                    <div id="collapseprofissionais" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="#">Cadastro</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsevacinas"
-                       aria-expanded="true" aria-controls="collapsevacinas">
-                        <i class="fas fa-file-import"></i>
-                        <span>Vacinas</span>
-                    </a>
-                    <div id="collapsevacinas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="#">Cadastro</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsevacinacoes"
-                       aria-expanded="true" aria-controls="collapsevacinacoes">
-                        <i class="fas fa-file-import"></i>
-                        <span>Vacinações</span>
-                    </a>
-                    <div id="collapsevacinacoes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="#">Cadastro</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseposvacinas"
-                       aria-expanded="true" aria-controls="collapseposvacinas">
-                        <i class="fas fa-file-import"></i>
-                        <span>Pós-Vacinas</span>
-                    </a>
-                    <div id="collapseposvacinas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="#">Cadastro</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapselocaisdevacinacao"
-                       aria-expanded="true" aria-controls="collapselocaisdevacinacao">
-                        <i class="fas fa-file-import"></i>
-                        <span>Locais de Vacinação</span>
-                    </a>
-                    <div id="collapselocaisdevacinacao" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="{% url 'tipologias:listar_tipologias' %}"><strong>Listagem</strong></a>
                             <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}
+Listagem de Tipologias
+{% endblock titulo %}
+
+{% block bread %}
+<a href="{% url 'tipologias:listar_tipologias' %}">Listagem de Tipologias</a>
+{% endblock bread %}
+
+{% block content %}
+<body id="page-top">
+<div id="wrapper">
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <div class="container-fluid">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-list-ol"></i> Listagem de Tipologias</h2>
+                    </div>
+                    <div class="white-box">
+                        <h3 class="box-title m"></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr style="text-align: center">
+                                    <th>Ações</th>
+                                    <th>Código</th>
+                                    <th>Grupo</th>
+                                    <th>Descrição</th>
+                                    <th>Und. de Medida</th>
+                                    <th>Portencial Poluidor</th>
+                                    <th>SubGrupo</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for t in form %}
+                                <tr>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a href="#">
+                                            <i class="fa fa-edit" aria-hidden="true" style="color: blue;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                                        </a>
+                                    </td>
+                                    <td>{{ t.codigo }}</td>
+                                    <td>{{ t.grupo }}</td>
+                                    <td>{{ t.descricao }}</td>
+                                    <td>{{ t.und_medida_desc }}</td>
+                                    <td>{{ t.p_poluidor }}</td>
+                                    <td>{{ t.subgrupo }}</td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer py-3">
+                        <a class="btn btn-info" href="#"><i
+                                class="fa fa-plus"></i><span> Cadastrar</span></a>             &nbsp;
+                        <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                            <i class="fa fa-angle-double-left"></i> Voltar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock content %}
