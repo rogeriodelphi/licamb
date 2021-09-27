@@ -52,12 +52,12 @@
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsedistribuicoes"
                        aria-expanded="true" aria-controls="collapsedistribuicoes">
                         <i class="fas fa-file-import"></i>
-                        <span>Distribuições</span>
+                        <span>Grupos</span>
                     </a>
                     <div id="collapsedistribuicoes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="{% url 'grupos:listar_grupos' %}"><strong>Listagem</strong></a>
                             <a class="collapse-item" href="#">Cadastro</a>
 
                         </div>
@@ -68,7 +68,7 @@
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsedosesperdidas"
                        aria-expanded="true" aria-controls="collapsedosesperdidas">
                         <i class="fas fa-file-import"></i>
-                        <span>Doses Perdidas</span>
+                        <span>Subgrupos</span>
                     </a>
                     <div id="collapsedosesperdidas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
@@ -83,7 +83,7 @@
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsepacientes"
                        aria-expanded="true" aria-controls="collapsepacientes">
                         <i class="fas fa-file-import"></i>
-                        <span>Pacientes</span>
+                        <span>Tipologias</span>
                     </a>
                     <div id="collapsepacientes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
