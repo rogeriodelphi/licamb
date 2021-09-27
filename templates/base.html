@@ -25,8 +25,8 @@
     <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-info p-0">
         <div class="container-fluid d-flex flex-column p-0">
             <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-syringe"></i></div>
-                <div class="sidebar-brand-text mx-3"><span>SESAPI - PI</span></div>
+                <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-leaf"></i></div>
+                <div class="sidebar-brand-text mx-3"><span>Lic. Ambiental</span></div>
             </a>
             <hr class="sidebar-divider my-0">
             <ul class="nav navbar-nav text-light" id="accordionSidebar">
@@ -38,13 +38,13 @@
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseentradas"
                        aria-expanded="true" aria-controls="collapseentradas">
                         <i class="fas fa-file-import"></i>
-                        <span>Entradas</span>
+                        <span>Divisão</span>
                     </a>
                     <div id="collapseentradas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_entradas' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_entrada' %}">Cadastro</a>
+                            <a class="collapse-item" href="{% url 'divisoes:listar_divisoes' %}"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -57,8 +57,8 @@
                     <div id="collapsedistribuicoes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_distribuicoes' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_distribuicao' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
 
                         </div>
                     </div>
@@ -73,8 +73,8 @@
                     <div id="collapsedosesperdidas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_dosesperdidas' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_doseperdida' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -88,8 +88,8 @@
                     <div id="collapsepacientes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_pacientes' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_paciente' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -103,8 +103,8 @@
                     <div id="collapseprofissionais" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_profissionais' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_profissional' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -118,8 +118,8 @@
                     <div id="collapsevacinas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_vacinas' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_vacina' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -133,8 +133,8 @@
                     <div id="collapsevacinacoes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_vacinacoes' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_vacinacao' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -148,8 +148,8 @@
                     <div id="collapseposvacinas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_posvacinas' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_posvacina' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -163,8 +163,8 @@
                     <div id="collapselocaisdevacinacao" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_locais' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_local' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
@@ -178,18 +178,13 @@
                     <div id="collapsegrupos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="{% url 'vacinas:listar_grupos' %}"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="{% url 'vacinas:adicionar_local' %}">Cadastro</a>
+                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="#">Cadastro</a>
                         </div>
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a id="sidenavToggler" class="nav-link text-center">
-                        <i class="fa fa-fw fa-arrow-left" aria-hidden="true"></i>
-                        <div class="small">{{ user.get_full_name|default:user.username }}</div>
-                    </a>
-                </li>
+
             </ul>
             <div class="text-center d-none d-md-inline">
                 <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
@@ -239,12 +234,12 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true"
                                    aria-expanded="false">{{ user.get_full_name|default:user.username }}</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                    <a class="dropdown-item fa fa-user" href="{% url 'accounts:list_user_profile' %}"> Perfil</a>
-                                    <a class="dropdown-item fa fa-key" href="{% url 'accounts:user_change_password' %}"> Trocar senha</a>
-                                    <a class="dropdown-item fa fa-list" href="{% url 'accounts:change_user_information' user.username %}">
+                                    <a class="dropdown-item fa fa-user" href="#"> Perfil</a>
+                                    <a class="dropdown-item fa fa-key" href="#"> Trocar senha</a>
+                                    <a class="dropdown-item fa fa-list" href="#">
                                         Outras informações</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item fa fa-sign-out" href="{% url 'accounts:user_logout' %}"> Sair</a>
+                                    <a class="dropdown-item fa fa-sign-out" href="#"> Sair</a>
                                 </div>
                             </li>
                             {% endif %}
