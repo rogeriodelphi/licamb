@@ -5,3 +5,4 @@ from apps.divisoes.models import Divisao
 class DivisaoAdmin(admin.ModelAdmin):
     list_display = ('id', 'codigo', 'descricao')
     search_fields = ('codigo', 'descricao')
+

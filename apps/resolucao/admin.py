@@ -2,18 +2,6 @@ from django.contrib import admin
 from apps.resolucao.models import *
 
 
-# class DivisaoAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'codigo', 'descricao')
-#     search_fields = ('codigo', 'descricao')
-#
-# class GrupoAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'codigo', 'divisao', 'descricao')
-#     search_fields = ('codigo', 'divisao')
-#
-# class SubGrupoAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'codigo', 'grupo', 'descricao')
-#     search_fields = ('codigo', 'grupo', 'divisao')
-#
 # class TipologiaAdmin(admin.ModelAdmin):
 #     list_display = ('id', 'codigo', 'subgrupo', 'descricao')
 #     search_fields = ('codigo', 'subgrupo', 'divisao')
