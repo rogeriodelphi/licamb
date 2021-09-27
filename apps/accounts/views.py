@@ -21,3 +21,17 @@ def user_login(request):
         else:
             messages.error(request, "Usuário ou senha inválidos!")
     return render(request, template_name, {})
+
+
+def user_login(request):
+    template_name = 'accounts/user_login.html'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect(request.GET.get('next', '/'))
+        else:
+            messages.error(request, "Usuário ou senha inválidos")
+    return render(request, template_name, {})
