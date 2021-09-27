@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'apps.accounts',
     'apps.divisoes',
     'apps.grupos',
+    'apps.subgrupos',
 
     # 'apps.resolucao',
     # 'apps.licenciamento',

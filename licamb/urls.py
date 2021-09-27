@@ -10,6 +10,7 @@ urlpatterns = [
     path('contas/', include('apps.accounts.urls', namespace='accounts')),
     path('divisoes/', include('apps.divisoes.urls', namespace='divisoes')),
     path('grupos/', include('apps.grupos.urls', namespace='grupos')),
+    path('subgrupos/', include('apps.subgrupos.urls', namespace='subgrupos')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "LICAMB - Sistema de Licenciamento"

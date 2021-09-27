@@ -35,12 +35,12 @@
                 <hr class="sidebar-divider">
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseentradas"
-                       aria-expanded="true" aria-controls="collapseentradas">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsedivisoes"
+                       aria-expanded="true" aria-controls="collapsedivisoes">
                         <i class="fas fa-file-import"></i>
                         <span>Divisão</span>
                     </a>
-                    <div id="collapseentradas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div id="collapsedivisoes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
                             <a class="collapse-item" href="{% url 'divisoes:listar_divisoes' %}"><strong>Listagem</strong></a>
@@ -49,12 +49,12 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsedistribuicoes"
-                       aria-expanded="true" aria-controls="collapsedistribuicoes">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsegrupos"
+                       aria-expanded="true" aria-controls="collapsegrupos">
                         <i class="fas fa-file-import"></i>
                         <span>Grupos</span>
                     </a>
-                    <div id="collapsedistribuicoes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div id="collapsegrupos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
                             <a class="collapse-item" href="{% url 'grupos:listar_grupos' %}"><strong>Listagem</strong></a>
@@ -63,18 +63,18 @@
                         </div>
                     </div>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsedosesperdidas"
-                       aria-expanded="true" aria-controls="collapsedosesperdidas">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsesubgrupos"
+                       aria-expanded="true" aria-controls="collapsesubgrupos">
                         <i class="fas fa-file-import"></i>
                         <span>Subgrupos</span>
                     </a>
-                    <div id="collapsedosesperdidas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div id="collapsesubgrupos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
+                            <a class="collapse-item" href="{% url 'subgrupos:listar_subgrupos' %}"><strong>Listagem</strong></a>
                             <a class="collapse-item" href="#">Cadastro</a>
+
                         </div>
                     </div>
                 </li>
@@ -168,22 +168,6 @@
                         </div>
                     </div>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsegrupos"
-                       aria-expanded="true" aria-controls="collapsegrupos">
-                        <i class="fas fa-file-import"></i>
-                        <span>Grupos de Vacinação</span>
-                    </a>
-                    <div id="collapsegrupos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Menu de opções:</h6>
-                            <a class="collapse-item" href="#"><strong>Listagem</strong></a>
-                            <a class="collapse-item" href="#">Cadastro</a>
-                        </div>
-                    </div>
-                </li>
-
 
             </ul>
             <div class="text-center d-none d-md-inline">
