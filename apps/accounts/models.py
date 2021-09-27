@@ -78,3 +78,18 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def email_user(self, subject, message, from_email=None):
         send_mail(subject, message, from_email, [self.email])
+
+
+
+class UserProfile(models.Model):
+    foto = models.ImageField('Foto', upload_to='photos')
+    celular = models.CharField('Celular', max_length=16)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+
+    class Meta:
+        db_table = 'UserProfile'
+        verbose_name = 'Perfil do Usuário'
+        verbose_name_plural = 'Perfis dos usuários'
+
+    def __str__(self):
+        return self.Username.first_name
