@@ -5,7 +5,7 @@ from . import views
 app_name = 'apps.accounts'
 
 urlpatterns = [
-    # path('adicionar-usuario/', views.add_user, name='add_user'),
+    path('adicionar-usuario/', views.add_user, name='add_user'),
     path('login/', views.user_login, name='user_login'),
     path('sair/', views.user_logout, name='user_logout'),
     # path('alterar-senha/', views.user_change_password, name='user_change_password'),

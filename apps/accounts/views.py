@@ -5,8 +5,24 @@ from django.contrib.auth import authenticate, login, logout, update_session_auth
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 
-# from .forms import UserForm, UserProfileForm, UserFormChangeInformation
-# from .models import UserProfile
+from .forms import UserForm, UserProfileForm, UserFormChangeInformation
+from .models import UserProfile
+
+def add_user(request):
+    template_name = 'accounts/add_user.html'
+    context = {}
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            # Para que possa passar a senha e fazer um hash dela
+            f = form.save(commit=False)
+            f.set_password(f.password)
+            f.save()
+            messages.success(request, "Usuário salvo com sucesso!")
+    # se a requisição for do tipo GET, instancia o formulário 'form'
+    form = UserForm()
+    context['form'] = form
+    return render(request, template_name, context)
 
 
 def user_login(request):
