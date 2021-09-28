@@ -10,8 +10,8 @@ def handler404(request, *args, **argv):
     response.status_code = 404
     return response
 
-# DIVISÃO
-# @login_required(login_url='/cadastros/vacinas/login/')
+# SUBGRUPOS
+@login_required(login_url='/contas/login/')
 def listar_subgrupos(request):
     template_name = 'subgrupos/listar_subgrupos.html'
     form = SubGrupo.objects.all()

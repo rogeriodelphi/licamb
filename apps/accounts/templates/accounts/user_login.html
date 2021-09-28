@@ -32,15 +32,15 @@
     <link href="{% static 'css/signin.css' %}" rel="stylesheet">
 </head>
 <body class="text-center">
-<form class="form-signin" method="POST" action="." autocomplete="off">
-    {% csrf_token %}
-    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-    <label for="username" class="sr-only">Usuário</label>
-    <input type="text" id="username" name="username" class="form-control" placeholder="Nome de usuário" required autofocus>
-    <label for="password" class="sr-only">Senha</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-    <a href="{% url 'accounts:add_user' %}" class="btn btn-lg btn-info btn-block" type="submit">Criar conta</a>
-</form>
+    <form class="form-signin" method="POST" action="." autocomplete="off">
+        {% csrf_token %}
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+        <label for="username" class="sr-only">Usuário</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Nome de usuário" required autofocus>
+        <label for="password" class="sr-only">Senha</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        <a href="#" class="btn btn-lg btn-info btn-block" type="submit">Criar conta</a>
+    </form>
 </body>
 </html>

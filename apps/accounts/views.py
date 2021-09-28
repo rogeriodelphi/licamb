@@ -17,9 +17,9 @@ def user_login(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect(request.GET.get('next', '/cadastros/vacinas/site/'))
+            return redirect(request.GET.get('next', '/'))
         else:
-            messages.error(request, "Usuário ou senha inválidos!")
+            messages.error(request, "Usuário ou senha inválidos")
     return render(request, template_name, {})
 
 

@@ -89,7 +89,7 @@ class UserProfile(models.Model):
     class Meta:
         db_table = 'UserProfile'
         verbose_name = 'Perfil do Usuário'
-        verbose_name_plural = 'Perfis dos usuários'
+        verbose_name_plural = 'Perfis dos Usuários'
 
     def __str__(self):
         return self.Username.first_name

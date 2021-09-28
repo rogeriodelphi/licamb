@@ -11,7 +11,7 @@ def handler404(request, *args, **argv):
     return response
 
 # DIVISÃO
-# @login_required(login_url='/cadastros/vacinas/login/')
+@login_required(login_url='/contas/login/')
 def listar_divisoes(request):
     template_name = 'divisoes/listar_divisoes.html'
     form = Divisao.objects.all()

@@ -10,8 +10,8 @@ def handler404(request, *args, **argv):
     response.status_code = 404
     return response
 
-# DIVISÃO
-# @login_required(login_url='/cadastros/vacinas/login/')
+# TIPOLOGIA
+@login_required(login_url='/contas/login/')
 def listar_tipologias(request):
     template_name = 'tipologias/listar_tipologias.html'
     form = Tipologia.objects.all()
