@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'apps.grupos',
     'apps.subgrupos',
     'apps.tipologias',
+    'crispy_forms',
 
     # 'apps.resolucao',
     # 'apps.licenciamento',
