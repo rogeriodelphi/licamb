@@ -2,8 +2,8 @@ from django.contrib.auth.models import User
 from django.db import models
 
 class Divisao(models.Model):
-    codigo = models.CharField(max_length=1, null=False, blank=False, verbose_name='Código')
-    descricao = models.CharField(max_length=80)
+    codigo = models.CharField(max_length=1, unique=True, null=False, blank=False, verbose_name='Código')
+    descricao = models.CharField(max_length=80, unique=True, verbose_name='Descrição')
 
     class Meta:
         db_table = 'Divisao'
