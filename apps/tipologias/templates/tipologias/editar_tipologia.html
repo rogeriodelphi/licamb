@@ -2,16 +2,18 @@
 
 {% load widget_tweaks %}
 
+{% load static %}
+
 {% block titulo %}
-Cadastro de Tipologia
+Editar de Tipologias
 {% endblock titulo %}
 
 {% block bread %}
-<a href="{% url 'tipologias:adicionar_tipologia' %}"> Cadastro de Tipologia</a>
+<a href="{% url 'tipologias:editar_tipologia' %}">Editar de Tipologia</a>
 {% endblock bread %}
 
-{% block content %}
 
+{% block content %}
 <body id="page-top">
 <div id="wrapper">
     <div id="content-wrapper" class="d-flex flex-column">
@@ -19,7 +21,7 @@ Cadastro de Tipologia
             <div class="container-fluid">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Cadastro de Tipologias</h2>
+                        <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Editar Tipologia</h2>
                     </div>
                     <div class="white-box">
                         <h3 class="box-title m"></h3>
@@ -50,7 +52,7 @@ Cadastro de Tipologia
                                     </div>
                                 </div>
                             </div>
-                             <div class="p-3 mb-2 bg-light text-dark">
+                            <div class="p-3 mb-2 bg-light text-dark">
                                 <div class="row">
                                     <div class="col-md-10">
                                         {{ form.und_medida_desc.errors }}
@@ -83,6 +85,3 @@ Cadastro de Tipologia
     </div>
 </div>
 {% endblock content %}
-
-
-

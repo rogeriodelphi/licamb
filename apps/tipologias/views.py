@@ -34,3 +34,14 @@ def adicionar_tipologia(request):
     form = TipologiaForm()
     context['form'] = form
     return render(request, template_name, context)
+
+@login_required(login_url='/contas/login')
+def editar_tipologia(request, id):
+    template_name = 'tipologias/editar_tipologia.html'
+    tipologia = Tipologia.objects.get(id=id)
+    form = TipologiaForm(request.POST or None, instance=tipologia)
+    if form.is_valid():
+        form.save()
+        return redirect('tipologias:listar_tipologias')
+    context = {'form': form}
+    return render(request, template_name, context)
