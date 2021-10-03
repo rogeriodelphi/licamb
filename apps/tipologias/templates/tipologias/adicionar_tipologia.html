@@ -1,6 +1,6 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
-{% load crispy_forms_tags %}
+{% load widget_tweaks %}
 
 {% block titulo %}
 Cadastro de Tipologia
@@ -11,96 +11,91 @@ Cadastro de Tipologia
 {% endblock bread %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12"></div>
+
+<body id="page-top">
+<div id="wrapper">
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <div class="container-fluid">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Cadastro de Tipologias</h2>
+                    </div>
+                    <div class="white-box">
+                        <h3 class="box-title m"></h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="form" method="POST">
+                            {% csrf_token %}
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        {{ form.codigo.errors }}
+                                        <label for="{{ form.codigo.id_for_label }}"><strong>Código:</strong></label>
+                                        {{ form.codigo | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                    <div class="col-md-10">
+                                        {{ form.descricao.errors }}
+                                        <label for="{{ form.descricao.id_for_label }}"><strong>Descrição:</strong></label>
+                                        {{ form.descricao | add_class:"form-control" }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form.subgrupo.errors }}
+                                        <label for="{{ form.subgrupo.id_for_label }}"><strong>Subgrupo:</strong></label>
+                                        {{ form.subgrupo | add_class:"form-control" }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form.und_medida_desc.errors }}
+                                        <label for="{{ form.und_medida_desc.id_for_label }}"><strong>Unidade de Medida:</strong></label>
+                                        {{ form.und_medida_desc | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form.p_poluidor.errors }}
+                                        <label for="{{ form.p_poluidor.id_for_label }}"><strong>Potencial Poluidor:</strong></label>
+                                        {{ form.p_poluidor | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form.subgrupo.errors }}
+                                        <label for="{{ form.subgrupo.id_for_label }}"><strong>Subgrupo:</strong></label>
+                                        {{ form.subgrupo | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-info"><i class="fa fa-plus"></i> Salvar</button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                                            <i class="fa fa-angle-double-left"></i> Voltar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="card">
-    <div class="card-header">
-        <h2><i class="fa fa-users"></i> Cadastro de Tipologias</h2>
-    </div>
-    <div class="card-body">
-        <table class="table" width="100%" cellspacing="0">
-            <form method="post"
-                  novalidate>
-                {% csrf_token %}
-                <div class="container">
-                    <div class="p-3 mb-2 bg-light text-dark">
-                        <div class="row">
-                            <div class="col-md-5">
-                                {{ form.codigo.errors }}
-                                {{ form.codigo | as_crispy_field }}
-                            </div>
-                            <div class="col-md-4">
-                                {{ form.subgrupo.errors }}
-                                {{ form.subgrupo | as_crispy_field }}
-                            </div>
-                            <div class="col-md-3">
-                                {{ form.descricao.errors }}
-                                {{ form.descricao | as_crispy_field }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="p-3 mb-2 bg-light text-dark">
-                        <div class="row">
-                            <div class="col-md-3">
-                                {{ form.und_medida_desc.errors }}
-                                {{ form.und_medida_desc | as_crispy_field }}
-                            </div>
-                            <div class="col-md-6">
-                                {{ form.p_poluidor.errors }}
-                                {{ form.p_poluidor | as_crispy_field }}
-                            </div>
-                            <div class="col-md-3">
-                                {{ form.subgrupoo.errors }}
-                                {{ form.subgrupo | as_crispy_field }}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                {{ form.descricao.errors }}
-                                {{ form.descricao | as_crispy_field }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="p-3 mb-2 bg-light text-dark">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-info"><i class="fa fa-plus"></i> Salvar</button>
-                                &nbsp;
-                                <button type="button" class="btn btn-primary" onClick="history.go(-1)">
-                                    <i class="fa fa-angle-double-left"></i> Voltar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-            <script>
-                $("#id_uf").change(function () {
-                    var url = $("#clienteForm").attr("dados-cidades-url");
-                    var ufId = $(this).val();
-                    $.ajax({
-                        url: url,
-                        data: {
-                            'uf': ufId
-                        },
-                        success: function (data) {
-                            $("#id_cidade").html(data);
-                        }
-                    });
-                });
-            </script>
-        </table>
-    </div>
-</div><br>
-
 {% endblock content %}
 
 

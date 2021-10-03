@@ -17,13 +17,12 @@ class Unidade_Medida(models.Model):
 
 class Tipologia(models.Model):
     codigo = models.CharField(max_length=6, null=False, blank=False, verbose_name='Código')
-    subgrupo = models.ForeignKey(SubGrupo, on_delete=models.CASCADE, verbose_name='Código e Descrição do SubGrupo')
+    subgrupo = models.ForeignKey(SubGrupo, on_delete=models.CASCADE, verbose_name='SubGrupo')
     descricao = models.CharField(max_length=100, verbose_name='Descrição')
     und_medida_desc = models.ForeignKey(Unidade_Medida, on_delete=models.CASCADE, verbose_name='Unidade de Medida')
     # und_medida_valor = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Unidade de Medida(Valor)')
     p_poluidor = models.CharField(max_length=1, verbose_name='Potencial Poluidor')
-    subgrupo = models.ForeignKey(SubGrupo, on_delete=models.CASCADE, verbose_name='SubGrupo')
-    descricao = models.CharField(max_length=100)
+
 
     class Meta:
         db_table = 'Tipologia'
@@ -32,4 +31,4 @@ class Tipologia(models.Model):
         verbose_name_plural = 'Tipologias'
 
     def __str__(self):
-        return self.codigo
+        return self.subgrupo

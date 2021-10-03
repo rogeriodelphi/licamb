@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Apps
+    'crispy_forms',
     'widget_tweaks',
     'apps.core',
     'apps.accounts',
@@ -51,7 +52,8 @@ INSTALLED_APPS = [
     'apps.grupos',
     'apps.subgrupos',
     'apps.tipologias',
-    'crispy_forms',
+
+
 
     # 'apps.resolucao',
     # 'apps.licenciamento',

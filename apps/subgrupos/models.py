@@ -13,4 +13,4 @@ class SubGrupo(models.Model):
         verbose_name_plural = 'SubGrupos'
 
     def __str__(self):
-        return '{} - {}'.format(self.grupo, self.descricao)
+        return '{} - {}'.format(self.codigo, self.descricao)
