@@ -45,3 +45,13 @@ def editar_tipologia(request, id):
         return redirect('tipologias:listar_tipologias')
     context = {'form': form}
     return render(request, template_name, context)
+
+@login_required(login_url='/contas/login')
+def excluir_tipologia(request, id):
+    template_name = 'tipologias/excluir_tipologia.html'
+    form =  Tipologia.objects.get(id=id)
+    context = {'form': form}
+    if request.method == 'POST':
+        form.delete()
+        return redirect('tipologias:listar_tipologias')
+    return render(request, template_name, context)

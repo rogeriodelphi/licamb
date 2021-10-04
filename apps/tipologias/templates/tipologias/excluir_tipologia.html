@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% load static %}
+
+{% block titulo %}
+Editar de Tipologias
+{% endblock titulo %}
+
+{% block bread %}
+<a href="{% url 'tipologias:excluir_tipologia' %}">Excluir Tipologia</a>
+{% endblock bread %}
+
+{% block content %}
+<body id="page-top">
+    <div id="wrapper">
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-trash"></i> Cadastro de Tipologias</h2>
+                        </div>
+                        <div class="white-box">
+                            <h3 class="box-title m"></h3>
+                        </div>
+                        <div class="card-body">
+                                <div class="p-3 mb-2 bg-light text-dark">
+                                    <div class="card-body">
+                                        <div class="card-header"><h4>Deseja realmente excluir do sistema os dados abaixo:</h4><br>
+                                            <h6>Subgrupo: <strong>{{ form.subgrupo }}</strong></h6>
+                                            <h6>Código: <strong>{{ form.codigo }}</strong></h6>
+                                            <h6>Descrição: <strong>{{ form.descricao }}</strong></h6>
+                                            <h6>Unidade de Medida: <strong>{{ form.und_medida_desc}}</strong></h6>
+                                            <h6>Potencial Poluidor: <strong>{{ form.p_poluidor }}</strong></h6>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <form id="form" method="POST">
+                                                    {% csrf_token %}
+                                                    <button class="btn btn-danger" type="submit"><i class="mdi mdi-delete-forever"></i>Remover</button>
+                                                    <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                                                        <i class="fa fa-angle-double-left"></i> Voltar</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}
