@@ -1,6 +1,7 @@
 from django.db import models
 from apps.grupos.models import Grupo
 
+
 class SubGrupo(models.Model):
     codigo = models.CharField(max_length=6, unique=True, null=False, blank=False, verbose_name='Código')
     grupo = models.ForeignKey(Grupo, on_delete=models.CASCADE, verbose_name='Grupo')

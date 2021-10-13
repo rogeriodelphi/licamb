@@ -1,12 +1,10 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import PasswordChangeForm
 
-from .forms import UserForm, UserProfileForm, UserFormChangeInformation
-from .models import UserProfile
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from .forms import UserForm
+
 
 def add_user(request):
     template_name = 'accounts/add_user.html'

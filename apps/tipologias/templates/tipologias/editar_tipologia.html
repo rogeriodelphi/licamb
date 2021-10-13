@@ -12,7 +12,6 @@ Editar de Tipologias
 <a href="{% url 'tipologias:editar_tipologia' %}">Editar de Tipologia</a>
 {% endblock bread %}
 
-
 {% block content %}
 <body id="page-top">
     <div id="wrapper">
@@ -26,9 +25,9 @@ Editar de Tipologias
                         <div class="white-box">
                             <h3 class="box-title m"></h3>
                         </div>
-                        <div class="card-body">
-                            <form id="form" method="POST">
-                                {% csrf_token %}
+                        <form id="form" method="POST">
+                            {% csrf_token %}
+                            <div class="card-body">
                                 <div class="p-3 mb-2 bg-light text-dark">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -66,19 +65,15 @@ Editar de Tipologias
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-3 mb-2 bg-light text-dark">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn btn-info"><i class="fa fa-check"></i> Salvar</button>
-                                            &nbsp;
-                                            <button type="button" class="btn btn-primary" onClick="history.go(-1)">
-                                                <i class="fa fa-angle-double-left"></i> Voltar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="card-footer py-3">
+                                <button type="submit" class="btn btn-info"><i class="fa fa-check"></i> Salvar</button>
+                                &nbsp;
+                                <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                                    <i class="fa fa-angle-double-left"></i> Voltar
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

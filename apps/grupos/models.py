@@ -1,6 +1,7 @@
 from django.db import models
 from apps.divisoes.models import Divisao
 
+
 class Grupo(models.Model):
     codigo = models.CharField(max_length=3, unique=True, null=False, blank=False, verbose_name='Código')
     divisao = models.ForeignKey(Divisao, on_delete=models.CASCADE, verbose_name='Divisão')

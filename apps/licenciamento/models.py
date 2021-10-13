@@ -1,5 +1,5 @@
-from django.db import models
-from apps.resolucao.models import *
+# from django.db import models
+# from apps.resolucao.models import *
 
 
 # class Licenca(models.Model):

@@ -2,8 +2,9 @@ from django.db import models
 from apps.subgrupos.models import SubGrupo
 from apps.core.funcoes import potencial_poluidor
 
+
 class Unidade_Medida(models.Model):
-    und_medida_desc = models.CharField(max_length=255, unique=True ,verbose_name='Unidade de Medida')
+    und_medida_desc = models.CharField(max_length=255, unique=True, verbose_name='Unidade de Medida')
 
     class Meta:
         db_table = 'Unidade_medida'
@@ -23,8 +24,8 @@ class Tipologia(models.Model):
     descricao = models.CharField(max_length=100, unique=True, verbose_name='Descrição')
     und_medida_desc = models.ForeignKey(Unidade_Medida, on_delete=models.CASCADE, verbose_name='Unidade de Medida')
     # und_medida_valor = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Unidade de Medida(Valor)')
-    p_poluidor = models.CharField(max_length=1, choices=PP_CHOICES, verbose_name='Potencial Poluidor')
-
+    p_poluidor = models.CharField(max_length=1, null=True, blank=True, choices=PP_CHOICES,
+                                  verbose_name='Potencial Poluidor')
 
     class Meta:
         db_table = 'Tipologia'
@@ -33,4 +34,4 @@ class Tipologia(models.Model):
         verbose_name_plural = 'Tipologias'
 
     def __str__(self):
-        return self.subgrupo
+        return self.codigo

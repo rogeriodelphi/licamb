@@ -1,5 +1,5 @@
-from django.contrib import admin
-from apps.resolucao.models import *
+# from django.contrib import admin
+# from apps.resolucao.models import *
 
 
 # class TipologiaAdmin(admin.ModelAdmin):

@@ -1,4 +1,4 @@
-from django.contrib import admin
+# from django.contrib import admin
 # from licenciamento.models import Licenca
 
 # class LicencaAdmin(admin.ModelAdmin):

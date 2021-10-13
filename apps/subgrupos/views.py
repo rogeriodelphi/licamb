@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render
 from django.template import RequestContext
 from apps.subgrupos.models import SubGrupo
 
@@ -10,7 +10,7 @@ def handler404(request, *args, **argv):
     response.status_code = 404
     return response
 
-# SUBGRUPOS
+
 @login_required(login_url='/contas/login/')
 def listar_subgrupos(request):
     template_name = 'subgrupos/listar_subgrupos.html'
