@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 from django.template import RequestContext
 from django.template.loader import render_to_string
 from django.contrib.auth.admin import User
-# from django.core.mail import send_mail
 from apps.tipologias.models import Tipologia
+from django.core.mail import send_mail
 from .forms import TipologiaForm
 
 
@@ -68,6 +68,6 @@ def enviar_email_tipologia(request, id):
     corpo_email = 'Listagem das Tipologias'
     email_remetente = [User.email, ]
     email_destino = 'rbmdesenvolvimento@gmail.com'
-    send_email(assunto, corpo_email, email_remetente, email_destino, html_message=html_completo)
+    send_mail(assunto, corpo_email, email_remetente, email_destino, html_message=html_completo)
 
     return redirect('tipologias:enviar_tipologia_id')
