@@ -2,9 +2,9 @@
 
 {% load widget_tweaks %}
 
-{% block titulo %}
+{% block title %}
 Cadastro de Tipologia
-{% endblock titulo %}
+{% endblock title %}
 
 {% block bread %}
 <a href="{% url 'tipologias:adicionar_tipologia' %}"> Cadastro de Tipologia</a>
@@ -19,9 +19,6 @@ Cadastro de Tipologia
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Cadastro de Tipologias</h2>
-                        </div>
-                        <div class="white-box">
-                            <h3 class="box-title m"></h3>
                         </div>
                         <form id="form" method="POST">
                             {% csrf_token %}

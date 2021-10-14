@@ -7,7 +7,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+    <meta name="description" content="{% block description %}Página de Licenciamento Ambiental{% endblock description %}">
+    <meta name="author" content="RBM Sistemas">
+    <title>{% block title%}LICAMB{% endblock title%}</title>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" type="text/css" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -147,8 +150,9 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdown07">
                                     <a class="dropdown-item fa fa-user" href="#"> Perfil</a>
                                     <a class="dropdown-item fa fa-key" href="#"> Trocar senha</a>
-                                    <a class="dropdown-item fa fa-list" href="#">
-                                        Outras informações</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item fa fa-edit" href="#"> Administração</a>
+                                    <a class="dropdown-item fa fa-key" href="{% url 'accounts:add_user' %}"> Criar usuário</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{% url 'accounts:user_logout' %}"><i class="fa fa-window-close"></i> Sair</a>
                                 </div>
@@ -157,7 +161,7 @@
                         </ul>
                 </div>
             </nav>
-            {% block content %}
+            {% block content %}l
 
             {% endblock content %}
         </div>
