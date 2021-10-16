@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+Listagem de Tipologias
+{% endblock title %}
+
+{% block bread %}
+<a href="#">Verificar documentação para Licenciamento</a>
+{% endblock bread %}
+
+{% block content %}
+<body id="page-top">
+<div id="wrapper">
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <div class="container-fluid">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-list-ol"></i> Documentação para Licenciamento</h2>
+                    </div>
+                    <div class="white-box">
+                        <h3 class="box-title m"></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body">
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form.subgrupo.errors }}
+                                        <label for="{{ form.subgrupo.id_for_label }}"><strong>Subgrupo:</strong></label>
+                                        {{ form.subgrupo | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        {{ form.codigo.errors }}
+                                        <label for="{{ form.codigo.id_for_label }}"><strong>Código:</strong></label>
+                                        {{ form.codigo | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                    <div class="col-md-10">
+                                        {{ form.descricao.errors }}
+                                        <label for="{{ form.descricao.id_for_label }}"><strong>Descrição:</strong></label>
+                                        {{ form.descricao | add_class:"form-control" }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 mb-2 bg-light text-dark">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        {{ form.und_medida_desc.errors }}
+                                        <label for="{{ form.und_medida_desc.id_for_label }}"><strong>Unidade de Medida:</strong></label>
+                                        {{ form.und_medida_desc | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{ form.p_poluidor.errors }}
+                                        <label for="{{ form.p_poluidor.id_for_label }}"><strong>Potencial Poluidor:</strong></label>
+                                        {{ form.p_poluidor | add_class:"form-control"|attr:"autofocus" }}
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="valor">Valor</label>
+                                        <input type="number" class="form-control" id="valor">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer py-3">
+                        <a class="btn btn-info" href="#"><i
+                                class="fa fa-plus"></i><span> Cadastrar</span></a>             &nbsp;
+                        <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                            <i class="fa fa-angle-double-left"></i> Voltar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock content %}
+
