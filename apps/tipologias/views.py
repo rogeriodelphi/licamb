@@ -18,7 +18,9 @@ def handler404(request, *args, **argv):
 def listar_tipologias(request):
     template_name = 'tipologias/listar_tipologias.html'
     form = Tipologia.objects.all()
-    context = {'form': form}
+    context = {
+        'form': form,
+    }
     return render(request, template_name, context)
 
 
@@ -27,7 +29,7 @@ def adicionar_tipologia(request):
     template_name = 'tipologias/adicionar_tipologia.html'
     context = {}
     if request.method == 'POST':
-        form = TipologiaForm(request.POST)
+        form = TipologiaForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             # messages.success(request, 'Categoria salva com sucesso.')

@@ -32,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
+
 AUTH_USER_MODEL = 'accounts.User'
 
 # Application definition
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Apps
+    'django_extensions',
     'crispy_forms',
     'widget_tweaks',
     'apps.core',

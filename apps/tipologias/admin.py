@@ -4,7 +4,7 @@ from apps.tipologias.models import Tipologia, Unidade_Medida
 
 @admin.register(Tipologia)
 class TipologiaAdmin(admin.ModelAdmin):
-    list_display = ('id', 'codigo', 'descricao', 'subgrupo', 'und_medida_desc')
+    list_display = ('id', 'codigo', 'descricao', 'subgrupo', 'und_medida_desc', 'pdf')
     search_fields = ('codigo', 'descricao', 'subgrupo', 'und_medida_desc')
 
 

@@ -20,7 +20,7 @@ Cadastro de Tipologia
                         <div class="card-header py-3">
                             <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Cadastro de Tipologias</h2>
                         </div>
-                        <form id="form" method="POST">
+                        <form id="form" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class="card-body">
                                 <div class="p-3 mb-2 bg-light text-dark">
@@ -51,12 +51,21 @@ Cadastro de Tipologia
                                         <div class="col-md-10">
                                             {{ form.und_medida_desc.errors }}
                                             <label for="{{ form.und_medida_desc.id_for_label }}"><strong>Unidade de Medida:</strong></label>
-                                            {{ form.und_medida_desc | add_class:"form-control"|attr:"autofocus" }}
+                                            {{ form.und_medida_desc | add_class:"form-control" }}
                                         </div>
                                         <div class="col-md-2">
                                             {{ form.p_poluidor.errors }}
                                             <label for="{{ form.p_poluidor.id_for_label }}"><strong>Potencial Poluidor:</strong></label>
                                             {{ form.p_poluidor | add_class:"form-control"|attr:"autofocus" }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 mb-12 bg-light text-dark">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            {{ form.pdf.errors }}
+                                            <label for="{{ form.pdf.id_for_label }}"><strong>PDF:</strong></label>
+                                            {{ form.pdf | add_class:"form-control"|attr:"autofocus" }}
                                         </div>
                                     </div>
                                 </div>

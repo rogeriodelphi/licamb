@@ -26,6 +26,8 @@ class Tipologia(models.Model):
     # und_medida_valor = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Unidade de Medida(Valor)')
     p_poluidor = models.CharField(max_length=1, null=True, blank=True, choices=PP_CHOICES,
                                   verbose_name='Potencial Poluidor')
+    pdf = models.FileField(null=False, blank=False, upload_to='tipologias/pdfs/', verbose_name='PDF')
+    # pdf = models.FileField(null=False, blank=False, upload_to='tipologias/pdfs/', verbose_name='PDF')
 
     class Meta:
         db_table = 'Tipologia'
@@ -35,3 +37,11 @@ class Tipologia(models.Model):
 
     def __str__(self):
         return self.codigo
+
+    @property
+    def imageURL(self):
+        try:
+            pdf = self.pdf.url
+        except:
+            url=''
+        return pdf

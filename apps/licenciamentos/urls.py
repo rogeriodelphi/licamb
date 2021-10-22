@@ -6,5 +6,4 @@ app_name = 'apps.licenciamentos'
 
 urlpatterns = [
     path('verifica_doc_licenciamento/', verifica_doc_licenciamento, name='verifica_doc_licenciamento'),
-
 ]

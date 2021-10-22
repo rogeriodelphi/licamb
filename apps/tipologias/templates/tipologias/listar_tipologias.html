@@ -34,6 +34,7 @@ Listagem de Tipologias
                                         <th>Und. de Medida</th>
                                         <th>Portencial Poluidor</th>
                                         <th>SubGrupo</th>
+                                        <th>PDF</th>
                                         <th>Ações</th>
                                     </tr>
                                     </thead>
@@ -50,6 +51,12 @@ Listagem de Tipologias
                                             <td>{{ t.p_poluidor }}</td>
                                         {% endif %}
                                             <td>{{ t.subgrupo }}</td>
+                                        <td style="text-align: center; vertical-align: middle;">
+                                            <a href="/media/{{ t.pdf }}">
+                                                <i class="fa fa-download"></i>
+                                            </a>
+                                        </td>
+<!--                                        <td>{{ t.pdf }}</td>-->
                                         <td style="text-align: center; vertical-align: middle;">
                                             <a href="{% url 'tipologias:editar_tipologia' t.id %}">
                                                 <i class="fa fa-edit" aria-hidden="true"></i>

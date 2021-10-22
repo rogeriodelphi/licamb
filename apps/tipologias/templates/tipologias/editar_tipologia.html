@@ -25,7 +25,7 @@ Editar Tipologia
                         <div class="white-box">
                             <h3 class="box-title m"></h3>
                         </div>
-                        <form id="form" method="POST">
+                        <form id="form" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class="card-body">
                                 <div class="p-3 mb-2 bg-light text-dark">
@@ -62,6 +62,15 @@ Editar Tipologia
                                             {{ form.p_poluidor.errors }}
                                             <label for="{{ form.p_poluidor.id_for_label }}"><strong>Potencial Poluidor:</strong></label>
                                             {{ form.p_poluidor | add_class:"form-control"|attr:"autofocus" }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 mb-12 bg-light text-dark">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            {{ form.pdf.errors }}
+                                            <label for="{{ form.pdf.id_for_label }}"><strong>PDF:</strong></label>
+                                            {{ form.pdf | add_class:"form-control"|attr:"autofocus" }}
                                         </div>
                                     </div>
                                 </div>
