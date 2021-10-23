@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+Meu Perfil - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+<body id="page-top">
+    <div id="wrapper">
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Alterar Perfil</h2>
+                        </div>
+<!--                        {% include 'partials/messages.html' %}-->
+                        <form id="form" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="card-body">
+                                <div class="p-3 mb-2 bg-light text-dark">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {{ form.foto.errors }}
+                                            <label for="{{ form.foto.id_for_label }}"><strong>Foto:</strong></label>
+                                            {{ form.foto | add_class:"form-control"|attr:"autofocus" }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 mb-2 bg-light text-dark">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {{ form.celular.errors }}
+                                            <label for="{{ form.celular.id_for_label }}"><strong>Celular:</strong></label>
+                                            {{ form.celular | add_class:"form-control"|attr:"autofocus" }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-info"><i class="fa fa-check"></i> Salvar</button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                                            <i class="fa fa-angle-double-left"></i> Voltar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}
