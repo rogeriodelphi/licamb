@@ -77,5 +77,5 @@ class UserProfile(models.Model):
         verbose_name = 'Perfil do Usuário'
         verbose_name_plural = 'Perfis dos Usuários'
 
-    def __str__(self):
-        return self.Username.first_name
+    def __unicode__(self):
+        return self.user

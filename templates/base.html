@@ -149,10 +149,10 @@
                                    aria-expanded="false">{{ user.get_full_name|default:user.username }}</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdown07">
                                     <a class="dropdown-item fa fa-user" href="#"> Perfil</a>
-                                    <a class="dropdown-item fa fa-key" href="#"> Trocar senha</a>
+                                    <a class="dropdown-item fa fa-plus" href="{% url 'accounts:add_user_profile' %}"> Criar Perfil</a>
+                                    <a class="dropdown-item fa fa-key" href="{% url 'accounts:user_change_password' %}"> Trocar senha</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item fa fa-edit" href="#"> Administração</a>
-                                    <a class="dropdown-item fa fa-key" href="{% url 'accounts:add_user' %}"> Criar usuário</a>
                                     <a class="dropdown-item fa fa-user" href="{% url 'accounts:add_user' %}"> Criar usuário</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{% url 'accounts:user_logout' %}"><i class="fa fa-window-close"></i> Sair</a>
