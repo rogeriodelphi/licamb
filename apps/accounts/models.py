@@ -68,7 +68,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class UserProfile(models.Model):
-    foto = models.ImageField('Foto', upload_to='photos')
+    photo = models.ImageField('Foto', upload_to='photos')
     celular = models.CharField('Celular', max_length=16)
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
 

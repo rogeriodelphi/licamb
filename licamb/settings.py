@@ -135,9 +135,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'templates/static')
-]
+#Em desenvolvimento ficam aqui - produção ficam no STATIC_ROOT
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'staticfiles'),
+)
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -150,6 +151,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # LOGOUT_REDIRECT_URL = '/login/'
 
 LOGIN_URL = '/login/'
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+    messages.INFO: 'alert-info',
+}
+
 
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'

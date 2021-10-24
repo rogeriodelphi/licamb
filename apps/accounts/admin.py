@@ -10,4 +10,4 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(UserProfile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('id', 'foto', 'celular')
+    list_display = ('id', 'photo', 'celular')

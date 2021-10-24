@@ -14,10 +14,8 @@ urlpatterns = [
     path('tipologias/', include('apps.tipologias.urls', namespace='tipologias')),
     path('licenciamentos/', include('apps.licenciamentos.urls', namespace='licenciamentos')),
 ]
-static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# if settings.DEBUG:
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "LICAMB - Sistema de Licenciamento"
 admin.site.site_title = "LICAMB - Sistema de Licenciamento"
