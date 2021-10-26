@@ -27,35 +27,60 @@ Listagem de Tipologias
                         <div class="card-body">
                             <div class="card-header">
                                 <h5 class="pull-left"><i class="fa fa-download"></i><strong> Arquivos comuns para Download:</strong></h5>
-                                <p> 1. Requerimento - Prefeitura.docx</p>
+                                <p><a href="/media/arquivo/A2.2.3_-_Caprinos_e_Ovinos.pdf" target="_blank">1. Requerimento - Prefeitura.docx</a></p>
                                 <p>2. Declaração de Responsabilidade Técnica - DRT.docx</p>
                                 <p>3. Termo de Responsabilidade Ambiental - TRA.docx</p>
                             </div>
-                            <div class="p-3 mb-2 bg-light text-dark">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label><strong>Descrição:</strong></label>
-                                        <select class="form-control ml-sm-2 mr-sm-2" name="codigo">
-                                            <option value="">---------</option>
-                                            {% for t in tipologias %}
-                                                <option value="{{ t.id }}">
-                                                    {{ t.id }} -
-                                                    {{ t.codigo }} -
-                                                    {{ t.descricao }} -
-                                                    {{ t.p_poluidor }}
-                                                </option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                        <tr style="text-align: center">
+                                            <th>ID</th>
+                                            <th>Código</th>
+                                            <th>Descrição</th>
+                                            <th>Und. de Medida</th>
+                                            <th>Portencial Poluidor</th>
+                                            <th>SubGrupo</th>
+                                            <th>PDF</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for t in tipologias %}
+                                        <tr>
+                                            <td>{{ t.id }}</td>
+                                            <td>{{ t.codigo }}</td>
+                                            <td>{{ t.descricao }}</td>
+                                            <td>{{ t.und_medida_desc }}</td>
+                                            {% if t.p_poluidor == None %}
+                                            <td><span> - </span></td>
+                                            {% else %}
+                                            <td>{{ t.p_poluidor }}</td>
+                                            {% endif %}
+                                            <td>{{ t.subgrupo }}</td>
+                                            <td style="text-align: center; vertical-align: middle;">
+                                                <a href="/media/{{ t.pdf }}">
+                                                    <i class="fa fa-download"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
 <!--                            <div class="p-3 mb-2 bg-light text-dark">-->
 <!--                                <div class="row">-->
-<!--                                    <div class="col-md-4">-->
-<!--                                        <div class="col-md-4">-->
-<!--                                            <label for="descricao">Valor (R$)</label>-->
-<!--                                            <input type="text" id="descricao" name="descricao" value="{{ t.id }}">-->
-<!--                                        </div>-->
+<!--                                    <div class="col-md-12">-->
+<!--                                        <label><strong>Descrição:</strong></label>-->
+<!--                                        <select class="form-control ml-sm-2 mr-sm-2" name="codigo">-->
+<!--                                            <option value="">-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</option>-->
+<!--                                            {% for t in tipologias %}-->
+<!--                                                <option value="{{ t.id }}">-->
+<!--                                                    {{ t.descricao }}-->
+<!--                                                </option>-->
+<!--                                            {% endfor %}-->
+<!--                                        </select>-->
 <!--                                    </div>-->
 <!--                                </div>-->
 <!--                            </div>-->

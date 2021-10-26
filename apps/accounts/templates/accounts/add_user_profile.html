@@ -16,8 +16,8 @@ Meu Perfil - {{ block.super }}
                         <div class="card-header py-3">
                             <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-pencil-alt"></i> Alterar Perfil</h2>
                         </div>
-<!--                        {% include 'partials/messages.html' %}-->
-                        <form id="form" method="POST" enctype="multipart/form-data">
+                        {% include 'partials/messages.html' %}
+<!--                        <form id="form" method="POST" enctype="multipart/form-data">-->
                             {% csrf_token %}
                             <div class="card-body">
                                 <div class="p-3 mb-2 bg-light text-dark">

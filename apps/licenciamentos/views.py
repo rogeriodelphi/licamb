@@ -1,7 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-# from apps.licenciamentos.forms import VerificaDocLicenciamentoForm
-from apps.tipologias.models import Tipologia, Unidade_Medida
+from apps.tipologias.models import Tipologia
 
 # @login_required(login_url='/contas/login/')
 def verifica_doc_licenciamento(request):
