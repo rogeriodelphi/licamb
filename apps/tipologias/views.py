@@ -44,7 +44,7 @@ def adicionar_tipologia(request):
 def editar_tipologia(request, id):
     template_name = 'tipologias/editar_tipologia.html'
     tipologia = Tipologia.objects.get(id=id)
-    form = TipologiaForm(request.POST or None, instance=tipologia)
+    form = TipologiaForm(request.POST or None, request.FILES or None, instance=tipologia)
     if form.is_valid():
         form.save()
         return redirect('tipologias:listar_tipologias')

@@ -5,7 +5,7 @@ class DocumentacaoLicenciamento(models.Model):
     cpf = models.CharField(max_length=11, verbose_name='CPF')
     email = models.EmailField(verbose_name='E-mail')
     status = models.CharField(max_length=20, verbose_name='Status', default='Enviado')
-    arquivo = models.FileField(upload_to='arquivo', null=True, blank=True, verbose_name='Arquivo')
+    arquivo = models.FileField(upload_to='arquivo', verbose_name='Arquivo')
 
     class Meta:
         db_table = 'DocumentacaoLicenciamento'

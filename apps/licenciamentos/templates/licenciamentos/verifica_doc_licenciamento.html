@@ -20,18 +20,23 @@ Listagem de Tipologias
                     <div class="card-header py-3">
                         <h2 class="text-info m-0 font-weight-bold"><i class="fa fa-list-ol"></i> Documentação para Licenciamento</h2>
                     </div>
-                    <div class="white-box">
-                        <h3 class="box-title m"></h3>
-                    </div>
                     <div class="card-body">
-                        <div class="card-body">
-                            <div class="card-header">
-                                <h5 class="pull-left"><i class="fa fa-download"></i><strong> Arquivos comuns para Download:</strong></h5>
-                                <p><a href="/media/arquivo/A2.2.3_-_Caprinos_e_Ovinos.pdf" target="_blank">1. Requerimento - Prefeitura.docx</a></p>
-                                <p>2. Declaração de Responsabilidade Técnica - DRT.docx</p>
-                                <p>3. Termo de Responsabilidade Ambiental - TRA.docx</p>
-                            </div>
+                        <div class="card-header py-3">
+                            <h4 class="text-info m-0 font-weight-bold" align="center"><i class="fa fa-table"></i> Arquivos comuns para Download</h4>
+                        </div>
+                        <div class="card-header">
                             <div class="card-body">
+                                <p><a href="/media/arquivo/Requerimento - Prefeitura.docx" download>1. Requerimento - Prefeitura.docx</a></p>
+                                <p><a href="/media/arquivo/Declaração de Responsabilidade Técnica - DRT.docx" download>2. Declaração de Responsabilidade Técnica - DRT.docx</a></p>
+                                <p><a href="/media/arquivo/Termo de Responsabilidade Ambiental - TRA.docx" download>3. Termo de Responsabilidade Ambiental - TRA.docx</a></p>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-header py-3">
+                                <h4 class="text-info m-0 font-weight-bold" align="center"><i class="fa fa-table"></i> Listagem de Tipologias</h4>
+                            </div>
+                            <div class="card-header">
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
@@ -59,7 +64,7 @@ Listagem de Tipologias
                                             {% endif %}
                                             <td>{{ t.subgrupo }}</td>
                                             <td style="text-align: center; vertical-align: middle;">
-                                                <a href="/media/{{ t.pdf }}">
+                                                <a href="/media/{{ t.pdf }}" download>
                                                     <i class="fa fa-download"></i>
                                                 </a>
                                             </td>
@@ -69,30 +74,29 @@ Listagem de Tipologias
                                     </table>
                                 </div>
                             </div>
-<!--                            <div class="p-3 mb-2 bg-light text-dark">-->
-<!--                                <div class="row">-->
-<!--                                    <div class="col-md-12">-->
-<!--                                        <label><strong>Descrição:</strong></label>-->
-<!--                                        <select class="form-control ml-sm-2 mr-sm-2" name="codigo">-->
-<!--                                            <option value="">-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</option>-->
-<!--                                            {% for t in tipologias %}-->
-<!--                                                <option value="{{ t.id }}">-->
-<!--                                                    {{ t.descricao }}-->
-<!--                                                </option>-->
-<!--                                            {% endfor %}-->
-<!--                                        </select>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+    <!--                            <div class="p-3 mb-2 bg-light text-dark">-->
+    <!--                                <div class="row">-->
+    <!--                                    <div class="col-md-12">-->
+    <!--                                        <label><strong>Descrição:</strong></label>-->
+    <!--                                        <select class="form-control ml-sm-2 mr-sm-2" name="codigo">-->
+    <!--                                            <option value="">-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</option>-->
+    <!--                                            {% for t in tipologias %}-->
+    <!--                                                <option value="{{ t.id }}">-->
+    <!--                                                    {{ t.descricao }}-->
+    <!--                                                </option>-->
+    <!--                                            {% endfor %}-->
+    <!--                                        </select>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
                         </div>
-                    </div>
-                    <div class="card-footer py-3">
-                        <a class="btn btn-info" href="#"><i
-                                class="fa fa-search"></i><span> Verificar documentação</span></a>             &nbsp;
-                        <button type="button" class="btn btn-primary" onClick="history.go(-1)">
-                            <i class="fa fa-angle-double-left"></i> Voltar
-                        </button>
-                    </div>
+                        <div class="card-footer py-3">
+                            <a class="btn btn-info" href="#"><i
+                                    class="fa fa-search"></i><span> Verificar documentação</span></a>             &nbsp;
+                            <button type="button" class="btn btn-primary" onClick="history.go(-1)">
+                                <i class="fa fa-angle-double-left"></i> Voltar
+                            </button>
+                        </div>
                 </div>
             </div>
         </div>
