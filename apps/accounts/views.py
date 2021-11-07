@@ -54,22 +54,6 @@ def user_login(request):
 
 
 @login_required(login_url='/contas/login/')
-def add_user_profile(request):
-    template_name = 'accounts/add_user_profile.html'
-    context = {}
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, request.FILES)
-        if form.is_valid():
-            f = form.save(commit=False)
-            f.user = request.user
-            f.save()
-            messages.success(request, 'Perfil alterado com sucesso!')
-    form = UserProfileForm()
-    context['form'] = form
-    return render(request, template_name, context)
-
-
-@login_required(login_url='/contas/login/')
 def user_change_password(request):
     template_name = 'accounts/user_change_password.html'
     context = {}
@@ -85,6 +69,20 @@ def user_change_password(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
+def add_user_profile(request):
+    template_name = 'accounts/add_user_profile.html'
+    context = {}
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            f = form.save(commit=False)
+            f.user = request.user
+            f.save()
+            messages.success(request, 'Perfil alterado com sucesso!')
+    form = UserProfileForm()
+    context['form'] = form
+    return render(request, template_name, context)
 
 @login_required(login_url='/contas/login/')
 def change_user_profile(request, username):
